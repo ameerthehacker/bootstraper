@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Text, Image, Link } from '@chakra-ui/core';
+import { Box, Text, Image, Link, IconButton, Stack } from '@chakra-ui/core';
 import PropTypes from 'prop-types';
 
 export default function Library({ title, image, description, learnMoreLink }) {
   return (
-    <Box overflow="hidden" rounded="lg" borderWidth="1px">
+    <Box mt={5} overflow="hidden" rounded="lg" borderWidth="1px">
       <Image width={200} src={image} />
       <Box p={5}>
         <Text fontWeight="semibold" fontSize="lg">
@@ -14,6 +14,10 @@ export default function Library({ title, image, description, learnMoreLink }) {
         <Link color="teal.500" href={learnMoreLink} isExternal>
           Learn More
         </Link>
+        <Stack mt={3} isInline>
+          <IconButton variantColor="teal" icon="add" />
+          <IconButton variantColor="orange" icon="settings" />
+        </Stack>
       </Box>
     </Box>
   );
