@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../../components/navbar';
 import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/core';
 import useFormat from '../../components/format';
+import Libraries from '../../components/libraries';
 
 function App() {
   const { bgColor, color } = useFormat();
@@ -23,7 +24,9 @@ function App() {
             <Tab>Files</Tab>
           </TabList>
           <TabPanels>
-            <TabPanel></TabPanel>
+            <TabPanel>
+              <Libraries mt={5} />
+            </TabPanel>
           </TabPanels>
         </Tabs>
       </Box>
