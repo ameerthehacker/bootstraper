@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import App from './pages/app';
-import { ThemeProvider, CSSReset } from '@chakra-ui/core';
+import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core';
 
 function Root() {
   return (
     <ThemeProvider>
       <CSSReset />
-      <App />
+      <ColorModeProvider>
+        <App />
+      </ColorModeProvider>
     </ThemeProvider>
   );
 }

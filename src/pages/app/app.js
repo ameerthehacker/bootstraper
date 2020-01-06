@@ -1,7 +1,12 @@
 import React from 'react';
+import NavBar from '../../components/navbar';
 
 function App() {
-  return <h1>Hello world from bootstrapper</h1>;
+  return (
+    <>
+      <NavBar />
+    </>
+  );
 }
 
 export default App;
