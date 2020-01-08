@@ -27,7 +27,7 @@ export default function Library({ title, image, description, learnMoreLink }) {
           Learn More
         </Link>
         <Stack mt={3} isInline>
-          <IconButton variantColor="teal" icon="add" />
+          <IconButton variantColor="green" icon="add" />
           <IconButton variantColor="orange" icon="settings" />
         </Stack>
       </Box>
