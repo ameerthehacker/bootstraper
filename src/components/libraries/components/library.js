@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Text, Image, Link, IconButton, Stack } from '@chakra-ui/core';
 import PropTypes from 'prop-types';
 
 export default function Library({ title, image, description, learnMoreLink }) {
+  const [isDescTruncated, setIsDescTruncated] = useState(true);
+
+  function toggleIsDescTruncated() {
+    setIsDescTruncated((isDescTruncated) => !isDescTruncated);
+  }
+
   return (
     <Box mt={5} overflow="hidden" rounded="lg" borderWidth="1px">
       <Image width={200} src={image} />
@@ -10,7 +16,13 @@ export default function Library({ title, image, description, learnMoreLink }) {
         <Text fontWeight="semibold" fontSize="lg">
           {title}
         </Text>
-        <Text maxWidth={160}>{description}</Text>
+        <Text
+          onClick={toggleIsDescTruncated}
+          maxWidth={160}
+          isTruncated={isDescTruncated}
+        >
+          {description}
+        </Text>
         <Link color="teal.500" href={learnMoreLink} isExternal>
           Learn More
         </Link>
