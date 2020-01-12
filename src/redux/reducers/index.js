@@ -1,4 +1,4 @@
-import librariesReducer from './libraries';
+import transpilers from './transpilers';
 import { combineReducers } from 'redux';
 
-export default combineReducers({ libraries: librariesReducer });
+export default combineReducers({ transpilers });

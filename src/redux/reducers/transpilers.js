@@ -1,14 +1,14 @@
 import { ACTIONS } from '../actions';
 
-export default function librariesReducer(state = {}, action) {
+export default function transpilers(state = {}, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case ACTIONS.ADD_LIBRARY:
+    case ACTIONS.ADD_TRANSPILER:
       state[payload.id] = { ...state[payload.id], isRequired: true };
 
       return state;
-    case ACTIONS.REMOVE_LIBRARY:
+    case ACTIONS.REMOVE_TRANSPILER:
       state[payload.id] = { ...state[payload.id], isRequired: false };
 
       return state;

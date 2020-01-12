@@ -1,7 +1,7 @@
 import placeholderImage from './images/icon-placeholder.png';
 
 export const DATA = {
-  libraries: {
+  transpilers: {
     babel: {
       title: 'Babel',
       description: `Babel converts ECMAScript 2015+ code into a backwards compatible version of JavaScript`,

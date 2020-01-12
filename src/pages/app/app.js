@@ -3,7 +3,7 @@ import NavBar from '../../components/navbar';
 import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/core';
 import { useDispatch } from 'react-redux';
 import useFormat from '../../components/format';
-import Libraries from '../../components/libraries';
+import Transpilers from '../../components/transpilers';
 import { ACTIONS } from '../../redux/actions';
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
           </TabList>
           <TabPanels>
             <TabPanel>
-              <Libraries mt={5} />
+              <Transpilers mt={5} />
             </TabPanel>
           </TabPanels>
         </Tabs>

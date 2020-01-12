@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Text, Image, Link, IconButton, Stack } from '@chakra-ui/core';
 import PropTypes from 'prop-types';
 
-export default function Library({
+export default function Transpiler({
   id,
   title,
   image,
@@ -56,7 +56,7 @@ export default function Library({
   );
 }
 
-Library.propTypes = {
+Transpiler.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
