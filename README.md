@@ -1,3 +1,3 @@
-# Bootstraper
+# Bootstrapper
 
-Bootstraper your front-end project everytime without a sweat
+Bootstrap your front-end project everytime without a sweat
