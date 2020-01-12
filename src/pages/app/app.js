@@ -29,12 +29,20 @@ function App() {
             <Tab>Testing</Tab>
             <Tab>Optimizations</Tab>
             <Tab>CI/CD</Tab>
-            <Tab>Files</Tab>
+            <Tab>Export</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
               <Transpilers mt={5} />
             </TabPanel>
+            <TabPanel />
+            <TabPanel />
+            <TabPanel />
+            <TabPanel />
+            <TabPanel />
+            <TabPanel />
+            <TabPanel />
+            <TabPanel>Export options come here</TabPanel>
           </TabPanels>
         </Tabs>
       </Box>
