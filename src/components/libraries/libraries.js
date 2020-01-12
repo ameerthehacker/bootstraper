@@ -1,17 +1,17 @@
 import React from 'react';
-import Library from './components';
 import { Stack } from '@chakra-ui/core';
 import { useSelector } from 'react-redux';
+import LibraryContainer from './containers/library';
 
 export default function Libraries(props) {
   const libraries = useSelector((state) => {
-    return state.libraries || [];
+    return state.libraries ? Object.keys(state.libraries) : [];
   });
 
   return (
     <Stack {...props} flexWrap="wrap" spacing={4} shouldWrapChildren isInline>
-      {Object.keys(libraries).map((library) => (
-        <Library key={library} {...libraries[library]} />
+      {libraries.map((library) => (
+        <LibraryContainer key={library} id={library} />
       ))}
     </Stack>
   );

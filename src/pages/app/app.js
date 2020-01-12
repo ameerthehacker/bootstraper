@@ -4,7 +4,7 @@ import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/core';
 import { useDispatch } from 'react-redux';
 import useFormat from '../../components/format';
 import Libraries from '../../components/libraries';
-import ACTIONS from '../../redux/actions';
+import { ACTIONS } from '../../redux/actions';
 
 function App() {
   const { bgColor, color } = useFormat();

@@ -1,5 +1,5 @@
-const ACTIONS = {
-  LOAD_DATA: 'LOAD_DATA'
+export const ACTIONS = {
+  LOAD_DATA: 'LOAD_DATA',
+  ADD_LIBRARY: 'ADD_LIBRARY',
+  REMOVE_LIBRARY: 'REMOVE_LIBRARY'
 };
-
-export default ACTIONS;

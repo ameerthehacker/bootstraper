@@ -1,11 +1,4 @@
-import ACTIONS from '../actions';
-import { DATA } from '../../data';
+import librariesReducer from './libraries';
+import { combineReducers } from 'redux';
 
-export default function rootReducer(state = {}, action) {
-  switch (action.type) {
-    case ACTIONS.LOAD_DATA:
-      return DATA;
-    default:
-      return state;
-  }
-}
+export default combineReducers({ libraries: librariesReducer });

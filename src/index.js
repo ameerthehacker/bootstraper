@@ -5,9 +5,10 @@ import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './redux/reducers';
+import { DATA } from './data';
 import './index.css';
 
-const reduxStore = createStore(rootReducer);
+const reduxStore = createStore(rootReducer, DATA);
 
 function Root() {
   return (

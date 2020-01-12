@@ -2,7 +2,16 @@ import React, { useState } from 'react';
 import { Box, Text, Image, Link, IconButton, Stack } from '@chakra-ui/core';
 import PropTypes from 'prop-types';
 
-export default function Library({ title, image, description, learnMoreLink }) {
+export default function Library({
+  id,
+  title,
+  image,
+  description,
+  learnMoreLink,
+  isRequired = false,
+  onAddClick,
+  onRemoveClick
+}) {
   const [isDescTruncated, setIsDescTruncated] = useState(true);
 
   function toggleIsDescTruncated() {
@@ -27,7 +36,19 @@ export default function Library({ title, image, description, learnMoreLink }) {
           Learn More
         </Link>
         <Stack mt={3} isInline>
-          <IconButton variantColor="green" icon="add" />
+          {isRequired ? (
+            <IconButton
+              onClick={() => onRemoveClick(id)}
+              variantColor="red"
+              icon="delete"
+            />
+          ) : (
+            <IconButton
+              onClick={() => onAddClick(id)}
+              variantColor="green"
+              icon="add"
+            />
+          )}
           <IconButton variantColor="orange" icon="settings" />
         </Stack>
       </Box>
@@ -36,8 +57,12 @@ export default function Library({ title, image, description, learnMoreLink }) {
 }
 
 Library.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  learnMoreLink: PropTypes.string.isRequired
+  learnMoreLink: PropTypes.string.isRequired,
+  isRequired: PropTypes.bool,
+  onAddClick: PropTypes.func.isRequired,
+  onRemoveClick: PropTypes.func.isRequired
 };
