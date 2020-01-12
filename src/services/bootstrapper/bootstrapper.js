@@ -1,6 +1,6 @@
-import fs from './fs';
-import webpackConfig from './webpack-config';
-import packageJson from './packages-json';
+import fs from '../fs';
+import webpackConfig from '../webpack-config';
+import packageJson from '../packacge-json';
 
 class Bootstrapper {
   constructor(state) {
