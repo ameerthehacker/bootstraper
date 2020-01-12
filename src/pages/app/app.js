@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavBar from '../../components/navbar';
 import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/core';
+import { useDispatch } from 'react-redux';
 import useFormat from '../../components/format';
 import Libraries from '../../components/libraries';
+import ACTIONS from '../../redux/actions';
 
 function App() {
   const { bgColor, color } = useFormat();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // load the available options
+    dispatch({ type: ACTIONS.LOAD_DATA });
+  }, [dispatch]);
 
   return (
     <>
