@@ -1,21 +1,20 @@
 class FS {
   constructor() {
-    this.fs = {};
+    this.__fs = {};
   }
 
   addFile(path, content) {
-    this.fs[path] = content;
+    this.__fs[path] = content;
   }
 
   deleteFile(path) {
-    if (this.fs[path]) {
-      delete this.fs[path];
+    if (this.__fs[path]) {
+      delete this.__fs[path];
     }
   }
 
-  exportAsZip() {
-    // TODO: implement a zip download feature
-    console.log(this.fs);
+  getFS() {
+    return this.__fs;
   }
 }
 

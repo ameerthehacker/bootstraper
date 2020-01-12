@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import useFormat from '../../components/format';
 import Transpilers from '../../components/transpilers';
 import { ACTIONS } from '../../redux/actions';
+import Export from '../../components/export';
 
 function App() {
   const { bgColor, color } = useFormat();
@@ -32,8 +33,8 @@ function App() {
             <Tab>Export</Tab>
           </TabList>
           <TabPanels>
-            <TabPanel>
-              <Transpilers mt={5} />
+            <TabPanel mt={5}>
+              <Transpilers />
             </TabPanel>
             <TabPanel />
             <TabPanel />
@@ -42,7 +43,9 @@ function App() {
             <TabPanel />
             <TabPanel />
             <TabPanel />
-            <TabPanel>Export options come here</TabPanel>
+            <TabPanel mt={5}>
+              <Export />
+            </TabPanel>
           </TabPanels>
         </Tabs>
       </Box>
